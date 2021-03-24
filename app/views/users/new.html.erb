@@ -1,10 +1,10 @@
+<h1>welcome on my page</h1>
 <%= form_tag("/users", method: "post") do %>
     <%= label_tag(:username, "username:") %>
-    <%= text_field_tag(:user, :username) %><br><br>
+    <%= text_field_tag(:username) %><br><br>
     <%= label_tag(:email, "email:") %>
-    <%= text_field_tag(:user, :email) %><br><br>
+    <%= text_field_tag(:email) %><br><br>
     <%= label_tag(:password, "password:") %>
-    <%= text_field_tag(:user, :password) %><br><br>
+    <%= text_field_tag(:password) %><br><br>
     <%= submit_tag("create user") %>
-    
-  <% end %>
+<% end %>
