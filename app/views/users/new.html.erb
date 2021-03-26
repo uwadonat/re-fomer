@@ -21,7 +21,13 @@
     <%= password_field_tag(:password) %><br><br>
     <%= submit_tag("create user") %>
 <% end %> -->
-
+<% if @user.errors.any? %>
+<div class="my-3">
+<% @user.errors.full_messages.each do |msg| %>
+<h6><%= msg %></h6>
+<% end %>
+</div>
+<% end %> 
 <div class="form-group my-3">
     <%= form_with model: @user  do |f|%>
       <%= f.text_field :username, autofocus: true, placeholder: 'Your user name here'%> <br/>

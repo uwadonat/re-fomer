@@ -1,3 +1,10 @@
+<% if @user.errors.any? %>
+<div class="my-3">
+<% @user.errors.full_messages.each do |msg| %>
+<h6><%= msg %></h6>
+<% end %>
+</div>
+<% end %> 
 <h1>welcome on my page</h1>
 <!--
 <h1>welcome on my page</h1>
@@ -23,8 +30,8 @@
 <% end %> -->
 
 <div class="form-group my-3">
-    <%= form_with model: @user  do |f|%>
-      <%= f.text_field :username, autofocus: true, placeholder: 'Your user name here'%> <br/>
+    <%= form_with model: @user  do |f| %>
+      <%= f.text_field :username, autofocus: true, placeholder: 'Your user name here' %> <br/>
       <br/>
       <%= f.email_field :email, placeholder: 'example@example.com'%> <br/>
       <br/>

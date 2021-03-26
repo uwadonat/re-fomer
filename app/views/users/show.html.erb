@@ -1,0 +1,19 @@
+<h1> list of users </h1>
+<ol>
+<% @user.each do |user| %>
+  <li>
+  <table border="2"> 
+   <tr>
+   <td><%= user.username %></td>
+   <td><%= user.email %></td>
+   <td><%= user.password %></td>
+   <td><%= link_to "Edit", edit_user_path(user.id) %></td>
+   </tr>
+   </table>
+  </li>
+<% end %>
+</ol>
+
+
+
+
