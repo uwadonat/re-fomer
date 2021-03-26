@@ -1,4 +1,4 @@
-<h1>welcome on my page</h1>
+<h1>welcome on my form_page</h1>
 <!--
 <h1>welcome on my page</h1>
 <form action="/users" method="post" accept-charset="UTF-8">
@@ -21,13 +21,7 @@
     <%= password_field_tag(:password) %><br><br>
     <%= submit_tag("create user") %>
 <% end %> -->
-<% if @user.errors.any? %>
-<div class="my-3">
-<% @user.errors.full_messages.each do |msg| %>
-<h6><%= msg %></h6>
-<% end %>
-</div>
-<% end %> 
+ 
 <div class="form-group my-3">
     <%= form_with model: @user  do |f|%>
       <%= f.text_field :username, autofocus: true, placeholder: 'Your user name here'%> <br/>
@@ -36,7 +30,14 @@
       <br/>
       <%= f.password_field :password, placeholder: 'Password'%><br/>
       <br/>
-      <div><%= f.submit "Save",class:"btn btn-primary mb-2"%></div>
+      <div><%= f.submit "Save" %></div>
     <% end %>
   </div>
 
+  <% if @user.errors.any? %>
+<div >
+<% @user.errors.full_messages.each do |msg| %>
+<h6><%= msg %></h6>
+<% end %>
+</div>
+<% end %>

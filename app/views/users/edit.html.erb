@@ -1,11 +1,5 @@
-<% if @user.errors.any? %>
-<div class="my-3">
-<% @user.errors.full_messages.each do |msg| %>
-<h6><%= msg %></h6>
-<% end %>
-</div>
-<% end %> 
-<h1>welcome on my page</h1>
+
+<h1>Edit user info</h1>
 <!--
 <h1>welcome on my page</h1>
 <form action="/users" method="post" accept-charset="UTF-8">
@@ -29,7 +23,7 @@
     <%= submit_tag("create user") %>
 <% end %> -->
 
-<div class="form-group my-3">
+<div>
     <%= form_with model: @user  do |f| %>
       <%= f.text_field :username, autofocus: true, placeholder: 'Your user name here' %> <br/>
       <br/>
@@ -37,7 +31,14 @@
       <br/>
       <%= f.password_field :password, placeholder: 'Password'%><br/>
       <br/>
-      <div><%= f.submit "Save",class:"btn btn-primary mb-2"%></div>
+      <div><%= f.submit "Save" %></div>
     <% end %>
   </div>
 
+  <% if @user.errors.any? %>
+  <div class="my-3">
+  <% @user.errors.full_messages.each do |msg| %>
+  <h6><%= msg %></h6>
+  <% end %>
+  </div>
+  <% end %> 
