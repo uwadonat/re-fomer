@@ -8,7 +8,7 @@
    <td><%= user.email %></td>
    <td><%= user.password %></td>
    <td><%= link_to "Edit", edit_user_path(user.id) %></td>
-   <td><%= link_to "delete", user_path(@user),
+   <td><%= link_to "delete", user_path(user.id),
    method: :delete,
    data: { confirm: "Are you sure?" } %></td>
    </tr>
