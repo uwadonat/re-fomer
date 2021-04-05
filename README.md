@@ -4,7 +4,7 @@
 
 ## About The Project
 
-In this project I Implemented the multiple ways to build a form in rails that can send parameters to a controller so that it can build an instance of a model with those parameters. we built our form using HTML, Form_tag and finally using Form_with.
+In this project I Implemented the multiple ways to build a form in rails that can send parameters to a controller so that it can build an instance of a model with those parameters. I built our form using HTML, Form_tag and finally using Form_with.
 I also added features for edit and delete record from database as optional.
 
 
